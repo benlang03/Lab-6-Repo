@@ -1,0 +1,39 @@
+"""Benjamin Lang - Encoder/Github Lab"""
+
+# takes in password and returns the encoded version
+def encoder(password):
+    pList = list(password)
+    pList = [int(j) for j in pList]
+    pList = [(i + 3) % 10 for i in pList]
+    #for i in range(len(pList)):
+        #pList[i] = (pList[i] + 3) % 10
+    pList = [str(k) for k in pList]
+    code = "".join(pList)
+    return code
+
+# displays menu
+def displayMenu():
+    print('Menu')
+    print('-' * 13)
+    print('1. Encode'
+          '\n2. Decode'
+          '\n3. Quit')
+
+# main method
+def main():
+    userChoice = 1
+    while 0 < userChoice < 3:
+        displayMenu()
+        print()
+        userChoice = int(input("Please enter an option: "))
+        if userChoice == 1:
+            password = input("Please enter your password to encode: ")
+            code = encoder(password)
+            print("Your password has been encoded and stored!")
+            print()
+        # elif userChoice == 2:
+            # password = decoder(code)
+            # print(f"The encoded password is {code}, and the original password is {password}.")
+
+if __name__ == '__main__':
+    main()
