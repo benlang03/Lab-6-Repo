@@ -15,7 +15,7 @@ def decode(password):
     decoder = ''
     password_str = str(password)
     for i in range(len(password_str)):
-        decoder += str(int(password_str[i]) - 3)
+        decoder += str(((int(password_str[i]) + 10) - 3) % 10)
     return decoder
 
 # displays menu
