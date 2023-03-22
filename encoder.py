@@ -1,7 +1,7 @@
 """Benjamin Lang - Encoder/Github Lab"""
 
 # takes in password and returns the encoded version
-def encoder(password):
+def encode(password):
     pList = list(password)
     pList = [int(j) for j in pList]
     pList = [(i + 3) % 10 for i in pList]
@@ -28,11 +28,11 @@ def main():
         userChoice = int(input("Please enter an option: "))
         if userChoice == 1:
             password = input("Please enter your password to encode: ")
-            code = encoder(password)
+            code = encode(password)
             print("Your password has been encoded and stored!")
             print()
         # elif userChoice == 2:
-            # password = decoder(code)
+            # password = decode(code)
             # print(f"The encoded password is {code}, and the original password is {password}.")
 
 if __name__ == '__main__':
