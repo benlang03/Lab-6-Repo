@@ -11,6 +11,13 @@ def encode(password):
     code = "".join(pList)
     return code
 
+def decode(password):
+    decoder = ''
+    password_str = str(password)
+    for i in range(len(password_str)):
+        decoder += str(int(password_str[i]) - 3)
+    return decoder
+
 # displays menu
 def displayMenu():
     print('Menu')
