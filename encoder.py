@@ -38,9 +38,9 @@ def main():
             code = encode(password)
             print("Your password has been encoded and stored!")
             print()
-        # elif userChoice == 2:
-            # password = decode(code)
-            # print(f"The encoded password is {code}, and the original password is {password}.")
+        elif userChoice == 2:
+            password = decode(code)
+            print(f"The encoded password is {code}, and the original password is {password}.")
 
 if __name__ == '__main__':
     main()
